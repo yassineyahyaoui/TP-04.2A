@@ -32,4 +32,12 @@ public class WordRepository {
     public void insert(Word word) {
         WordRoomDatabase.databaseWriteExecutor.execute(() -> mWordDao.insert(word));
     }
+
+    public void deleteAll(){
+        WordRoomDatabase.databaseWriteExecutor.execute(() -> mWordDao.deleteAll());
+    }
+
+    public void deleteWord(Word word)  {
+        WordRoomDatabase.databaseWriteExecutor.execute(() -> mWordDao.deleteWord(word));
+    }
 }
